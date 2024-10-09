@@ -8,17 +8,17 @@ body {
     height: 100px;
     width: 100px;
     margin-left:50px ;
-    
+border: 2px black;
 }
 
 /* Datepicker Container */
 .datepicker-container {
     position: relative;
     background-color: white;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    border: 2px solid #181717;
+    border-radius: 0px;
     width: 280px;
-    padding: 16px;
+    padding: 7px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     margin-left: 600px;
     margin-top: 80px;
@@ -26,17 +26,17 @@ body {
 .datepicker-input {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    padding: 2px;
-    
+    border: 2px solid #141212;
+    padding: 0px;
+    width: 280px;
     background-color: white;
     padding-bottom: 4px;
       
 
 }
 .datepicker-input img {
-    width: 16px; /* Adjust size of icon */
-    height: 16px; /* Adjust size of icon */
+    width: 16px; 
+    height: 16px; 
 }
     
 .calendar-icon {
@@ -60,11 +60,56 @@ body {
     top: 50px; /* Adjust this based on the input field's height */
     left: 0;
     background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 2px solid #0f0e0e;
+    border-radius: 5px;
     width: 280px;
     height: 400px;
     padding: 16px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 
+}
+
+.current-month {
+    font-size: 16px;
+    font-weight: bold;
+}
+.datepicker-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.datepicker-weekdays span {
+    padding: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Days of the Month */
+.datepicker-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+     /* Outer border for the grid */
+    box-sizing: border-box;
+    text-align: center;
+}
+.datepicker-days span {
+    padding: 8px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #010101; /* Creates the gridlines */
+
+    box-sizing: border-box;
+
+}
+.datepicker-days .day:hover {
+    background-color: #e0e0e0;
+}
+
+/* Optional: Style for a selected day */
+.datepicker-days .day.selected {
+    background-color: #007bff;
+    color: white;
 }
